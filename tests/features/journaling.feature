@@ -1,7 +1,11 @@
 Feature: Journaling
 
+  Background:
+    Given a user named "0xlyd"
+    And a journal entry with the text "Excited to start building LifeOS" owned by "0xlyd"
+
   Scenario: add a new entry
-    Given that I am logged in
+    Given that I am logged in as 0xlyd
     When I want to write a journal entry
     Then I can type a brief message
     Then I can add one or more tags
@@ -11,7 +15,7 @@ Feature: Journaling
     * a location
 
   Scenario: edit an entry
-    Given that I am logged in
+    Given that I am logged in as 0xlyd
     And that I have at least one journal entry
     When I want to edit a journal entry
     Then I can open the journal entry I want to edit
