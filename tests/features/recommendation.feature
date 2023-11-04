@@ -17,7 +17,7 @@ Feature: Recommendation
     Then this recommendation should be added in the list of my recommendations
 
   Scenario: edit a recommendation
-    When I want to see edit a recommendation I can do so by providing any of
+    When I want to edit a recommendation I can do so by providing any of
     * product's name (autocompletes)
     * category (autocompletes from product's name)
     * link
